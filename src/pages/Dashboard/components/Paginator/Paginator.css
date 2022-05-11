@@ -1,0 +1,9 @@
+.paginator-ellipsis-item {
+  display: none;
+}
+
+.paginator-container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
