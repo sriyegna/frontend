@@ -1,17 +1,31 @@
-import React, {useContext} from 'react';
-import { HeroesContext } from '../../context/heroes';
-import { DashboardContainer, DashboardHeroesContainer, DashboardHeroesCard } from './index.styled';
+import React, { useContext } from "react";
+import { HeroesContext } from "../../context/heroes";
+import { DashboardContainer, DashboardHeroesContainer } from "./index.styled";
+import DashboardHeroesCard from "./components/DashboardCard/DashboardHeroesCard";
 
 const Dashboard = () => {
-  const { state: { heroes } } = useContext(HeroesContext);
+  const {
+    state: { heroes },
+  } = useContext(HeroesContext);
 
-  return <DashboardContainer>
-    {heroes && heroes.length > 0 ?
-      <DashboardHeroesContainer>
-        {heroes.map(hero => <DashboardHeroesCard><img src={hero.imageUrl}/><span>{hero.name}</span></DashboardHeroesCard>)}
-      </DashboardHeroesContainer>
-    : <div>loading</div>}
-  </DashboardContainer>
+  return (
+    <DashboardContainer>
+      {heroes && heroes.length > 0 ? (
+        <DashboardHeroesContainer>
+          {heroes.map((hero) => (
+            <DashboardHeroesCard
+              key={hero.id}
+              name={hero.name}
+              imageUrl={hero.imageUrl}
+              id={hero.id}
+            />
+          ))}
+        </DashboardHeroesContainer>
+      ) : (
+        <div>loading</div>
+      )}
+    </DashboardContainer>
+  );
 };
 
 export default Dashboard;
