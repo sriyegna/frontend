@@ -66,7 +66,7 @@ const HeroDetail = ({ id }) => {
     return (
       characterData && (
         <DashboardHeroesCardStyles>
-          <DashboardHeroesCardImage src={characterData.imageUrl} />
+          <DashboardHeroesCardImage src={characterData.imageUrl} alt={`Image of ${characterData.name}`} />
           <DashboardHeroCardHorizontalLine />
           {characterData.name && (
             <CenteredH6>Hero Name: {characterData.name}</CenteredH6>

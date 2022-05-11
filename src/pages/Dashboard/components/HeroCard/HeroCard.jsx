@@ -17,15 +17,13 @@ const HeroCard = ({ name, imageUrl, id }) => {
     <>
       <DashboardHeroesCardContainer onClick={handleOpen}>
         <DashboardHeroesCardStyles>
-          <DashboardHeroesCardImage src={imageUrl} />
+          <DashboardHeroesCardImage src={imageUrl} alt={`Image of ${name}`} />
           <span>{name}</span>
         </DashboardHeroesCardStyles>
       </DashboardHeroesCardContainer>
       <Dialog
         open={open}
         onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
         fullWidth
         maxWidth={"xl"}
       >
