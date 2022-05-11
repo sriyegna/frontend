@@ -21,12 +21,7 @@ const HeroCard = ({ name, imageUrl, id }) => {
           <span>{name}</span>
         </DashboardHeroesCardStyles>
       </DashboardHeroesCardContainer>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        fullWidth
-        maxWidth={"xl"}
-      >
+      <Dialog open={open} onClose={handleClose} fullWidth maxWidth={"xl"}>
         <DialogContent>
           <DashboardHeroesDetail id={id} />
         </DialogContent>

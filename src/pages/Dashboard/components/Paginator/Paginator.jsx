@@ -1,40 +1,44 @@
-import { useContext } from "react";
-import ReactPaginate from "react-paginate";
-import { HeroesContext } from "../../../../context/heroes";
-import "./Paginator.css";
+import { useEffect, useMemo } from 'react'
+import { PaginationButton, ActivePaginationButton, PaginationNavigationButton, PaginationNavigationButtonImage } from  "./index.styled";
+import ChevronLeft from '../../../../assets/svg/chevron-left.svg'
+import ChevronRight from '../../../../assets/svg/chevron-right.svg'
 
-const Paginator = (props) => {
-  const {
-    state: { numOfPages },
-    setCurrentPage,
-  } = useContext(HeroesContext);
+const Paginator = ({currentPage, numOfPages, handlePageChange}) => {
 
-  const handlePageClick = (event) => {
-    setCurrentPage(event.selected);
-  };
+  useEffect(() => {
+    
+    console.log(currentPage)
+  }, [currentPage])
+
+  const values = useMemo(() => {
+    const result = []
+    if (currentPage < 3) {
+      for (let i = 0; i < 5; i++) {
+        result.push(i)
+      }
+    }
+    else if (currentPage >= 3 && currentPage < numOfPages - 2) {
+      for (let i = currentPage; i < currentPage + 5; i++) {
+        result.push(i - 2)
+      }
+    }
+    else if (currentPage >= numOfPages - 2) {
+      for (let i = numOfPages - 5 + 1; i <= numOfPages; i++) {
+        result.push(i)
+      }
+    }
+    return result;
+  }, [currentPage, numOfPages])
 
   return (
     <>
-      {props.children}
-      <ReactPaginate
-        nextLabel=">"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        marginPagesDisplayed={0}
-        pageCount={numOfPages}
-        previousLabel="<"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
-        breakLabel="..."
-        breakClassName="paginatorEllipsisItem"
-        breakLinkClassName="page-link"
-        containerClassName="paginatorContainer"
-        activeClassName="active"
-      />
+        <PaginationNavigationButton onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 0}><PaginationNavigationButtonImage src={ChevronLeft} alt="Previous Page" /></PaginationNavigationButton>
+        {values.map((value) => {
+          if (value !== currentPage) return (<PaginationButton onClick={() => handlePageChange(value)}>{value + 1}</PaginationButton>)
+          else return (<ActivePaginationButton onClick={() => handlePageChange(value)}>{value + 1}</ActivePaginationButton>)
+        })}
+        <PaginationNavigationButton onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === numOfPages}><PaginationNavigationButtonImage src={ChevronRight} alt="Next Page" /></PaginationNavigationButton>
+
     </>
   );
 };

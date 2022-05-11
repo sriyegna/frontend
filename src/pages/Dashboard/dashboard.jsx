@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { HeroesContext } from "../../context/heroes";
 import { DashboardContainer, DashboardHeroesContainer } from "./index.styled";
 import DashboardHeroesCard from "./components/HeroCard/HeroCard";
@@ -6,13 +6,13 @@ import Paginator from "./components/Paginator/Paginator";
 
 const Dashboard = () => {
   const {
-    state: { heroes, numOfPages },
+    state: { heroes, numOfPages }, currentPage, setCurrentPage 
   } = useContext(HeroesContext);
 
   return (
     <DashboardContainer>
       {heroes && heroes.length > 0 ? (
-        <Paginator itemsPerPage={18} numOfPages={numOfPages} dispatch>
+        <>
           <DashboardHeroesContainer>
             {heroes.map((hero) => (
               <DashboardHeroesCard
@@ -23,7 +23,8 @@ const Dashboard = () => {
               />
             ))}
           </DashboardHeroesContainer>
-        </Paginator>
+        <Paginator currentPage={currentPage} numOfPages={numOfPages} handlePageChange={(value) => setCurrentPage(value)} />
+        </>
       ) : (
         <div>loading</div>
       )}
