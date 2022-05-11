@@ -33,7 +33,6 @@ function HeroesProvider({ children }) {
     numOfPages: 0,
   });
   const [currentPage, setCurrentPage] = useState(0);
-  console.log("render Heroes.jsx");
 
   const fetchHeroes = () => {
     fetch(

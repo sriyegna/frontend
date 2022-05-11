@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { HeroesContext } from "../../context/heroes";
 import { DashboardContainer, DashboardHeroesContainer } from "./index.styled";
-import DashboardHeroesCard from "./components/DashboardCard/DashboardHeroesCard";
+import DashboardHeroesCard from "./components/HeroCard/HeroCard";
 import Paginator from "./components/Paginator/Paginator";
 
 const Dashboard = () => {
