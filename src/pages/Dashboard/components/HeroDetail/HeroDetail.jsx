@@ -3,11 +3,7 @@ import {
   DashboardHeroesCardStyles,
   DashboardHeroesCardImage,
 } from "../HeroCard/index.styled";
-import {
-  HeroDetailColumn,
-  DashboardHeroCardHorizontalLine,
-  CenteredH6,
-} from "./index.styled";
+import { HeroDetailColumn, HorizontalLine, CenteredH6 } from "./index.styled";
 
 const HeroDetail = ({ id }) => {
   const [characterData, setCharacterData] = useState(null);
@@ -66,8 +62,11 @@ const HeroDetail = ({ id }) => {
     return (
       characterData && (
         <DashboardHeroesCardStyles>
-          <DashboardHeroesCardImage src={characterData.imageUrl} alt={`Image of ${characterData.name}`} />
-          <DashboardHeroCardHorizontalLine />
+          <DashboardHeroesCardImage
+            src={characterData.imageUrl}
+            alt={`Image of ${characterData.name}`}
+          />
+          <HorizontalLine />
           {characterData.name && (
             <CenteredH6>Hero Name: {characterData.name}</CenteredH6>
           )}

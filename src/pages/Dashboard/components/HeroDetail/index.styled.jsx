@@ -7,8 +7,9 @@ export const HeroDetailColumn = styled.div`
   width: 25%;
 `;
 
-export const DashboardHeroCardHorizontalLine = styled.hr`
-  border: 2px solid black;
+export const HorizontalLine = styled.hr`
+  border: 1px solid black;
+  opacity: 100%;
   width: 80%;
   margin: 0 auto 15px auto;
 `;

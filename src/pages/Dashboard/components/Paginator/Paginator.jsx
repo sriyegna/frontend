@@ -30,9 +30,9 @@ const Paginator = (props) => {
         nextClassName="page-item"
         nextLinkClassName="page-link"
         breakLabel="..."
-        breakClassName="paginator-ellipsis-item"
+        breakClassName="paginatorEllipsisItem"
         breakLinkClassName="page-link"
-        containerClassName="paginator-container"
+        containerClassName="paginatorContainer"
         activeClassName="active"
       />
     </>

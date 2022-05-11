@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const DashboardHeroesCardContainer = styled.div`
+  display: flex;
   width: 16.6666%;
 `;
 
