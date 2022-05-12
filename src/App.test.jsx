@@ -6,9 +6,7 @@ const validatePage = async (page) => {
   let HeroesPage = HeroesPages[page];
   for (let i = 0; i < HeroesPage.length; i++) {
     const image = await waitFor(() =>
-      screen.getByAltText(
-        `Image of ${HeroesPage[i].name}`
-      )
+      screen.getByAltText(`Image of ${HeroesPage[i].name}`)
     );
     expect(image.src).toContain(HeroesPage[i].imageUrl);
     screen.getByText(HeroesPage[i].name);
