@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Dialog, DialogContent } from "@material-ui/core";
-import HeroDetail from "../HeroDetail/HeroDetail";
 import {
   DashboardHeroesCardStyles,
   DashboardHeroesCardImage,
   DashboardHeroesCardContainer,
 } from "./index.styled";
+import HeroDetailsDialog from "../HeroDetailsDialog/HeroDetailsDialog";
 
 const HeroCard = ({ name, imageUrl, id }) => {
   const [open, setOpen] = useState(false);
@@ -21,11 +20,7 @@ const HeroCard = ({ name, imageUrl, id }) => {
           <h6>{name}</h6>
         </DashboardHeroesCardStyles>
       </DashboardHeroesCardContainer>
-      <Dialog open={open} onClose={handleClose} maxWidth={"md"}>
-        <DialogContent>
-          <HeroDetail id={id} />
-        </DialogContent>
-      </Dialog>
+      <HeroDetailsDialog id={id} isOpen={open} handleClose={handleClose} />
     </>
   );
 };

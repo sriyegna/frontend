@@ -8,6 +8,7 @@ import {
   HorizontalLine,
   CenteredH6,
   HeroDetailContainer,
+  HeroDetailColumnContainer,
 } from "./index.styled";
 
 const HeroDetail = ({ id }) => {
@@ -17,13 +18,13 @@ const HeroDetail = ({ id }) => {
     const { appearance } = characterData || {};
     return (
       characterData && (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <HeroDetailColumnContainer>
           <h2>Appearance</h2>
           {appearance?.gender && <h6>Gender: {appearance.gender}</h6>}
           {appearance?.race && <h6>Race: {appearance.race}</h6>}
           {appearance?.height && <h6>Height: {appearance.height}</h6>}
           {appearance?.weight && <h6>Weight: {appearance.weight}</h6>}
-        </div>
+        </HeroDetailColumnContainer>
       )
     );
   };
@@ -32,7 +33,7 @@ const HeroDetail = ({ id }) => {
     const { biography } = characterData || {};
     return (
       characterData && (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <HeroDetailColumnContainer>
           <h2>Biography</h2>
           {biography?.alterEgos && (
             <h6>Alter Egos / Alias: {biography.alterEgos}</h6>
@@ -44,7 +45,7 @@ const HeroDetail = ({ id }) => {
             <h6>First Appearance: {biography.firstAppearance}</h6>
           )}
           {biography?.occupation && <h6>Occupation: {biography.occupation}</h6>}
-        </div>
+        </HeroDetailColumnContainer>
       )
     );
   };
@@ -53,7 +54,7 @@ const HeroDetail = ({ id }) => {
     const { stats } = characterData || {};
     return (
       characterData && (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <HeroDetailColumnContainer>
           <h2>Stats</h2>
           {stats?.combat && <h6>Combat: {stats.combat}</h6>}
           {stats?.durability && <h6>Durability: {stats.durability}</h6>}
@@ -61,7 +62,7 @@ const HeroDetail = ({ id }) => {
           {stats?.power && <h6>Power: {stats.power}</h6>}
           {stats?.speed && <h6>Speed: {stats.speed}</h6>}
           {stats?.strength && <h6>Strength: {stats.strength}</h6>}
-        </div>
+        </HeroDetailColumnContainer>
       )
     );
   };
