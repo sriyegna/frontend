@@ -61,7 +61,9 @@ function HeroesProvider({ children }) {
   }, []);
 
   return (
-    <HeroesContext.Provider value={{ state, dispatch, setCurrentPage, currentPage }}>
+    <HeroesContext.Provider
+      value={{ state, dispatch, setCurrentPage, currentPage }}
+    >
       {children}
     </HeroesContext.Provider>
   );

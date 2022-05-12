@@ -1,18 +1,25 @@
 import { useContext } from "react";
 import { HeroesContext } from "../../context/heroes";
-import { DashboardContainer, DashboardHeroesContainer } from "./index.styled";
+import {
+  DashboardContainer,
+  DashboardHeroesContainer,
+  LeftAlignedTitle,
+} from "./index.styled";
 import DashboardHeroesCard from "./components/HeroCard/HeroCard";
 import Paginator from "./components/Paginator/Paginator";
 
 const Dashboard = () => {
   const {
-    state: { heroes, numOfPages }, currentPage, setCurrentPage 
+    state: { heroes, numOfPages },
+    currentPage,
+    setCurrentPage,
   } = useContext(HeroesContext);
 
   return (
     <DashboardContainer>
       {heroes && heroes.length > 0 ? (
         <>
+          <LeftAlignedTitle>All Heroes</LeftAlignedTitle>
           <DashboardHeroesContainer>
             {heroes.map((hero) => (
               <DashboardHeroesCard
@@ -23,7 +30,11 @@ const Dashboard = () => {
               />
             ))}
           </DashboardHeroesContainer>
-        <Paginator currentPage={currentPage} numOfPages={numOfPages} handlePageChange={(value) => setCurrentPage(value)} />
+          <Paginator
+            currentPage={currentPage}
+            numOfPages={numOfPages}
+            handlePageChange={(value) => setCurrentPage(value)}
+          />
         </>
       ) : (
         <div>loading</div>

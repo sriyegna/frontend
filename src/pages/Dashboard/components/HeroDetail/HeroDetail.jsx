@@ -3,7 +3,12 @@ import {
   DashboardHeroesCardStyles,
   DashboardHeroesCardImage,
 } from "../HeroCard/index.styled";
-import { HeroDetailColumn, HorizontalLine, CenteredH6 } from "./index.styled";
+import {
+  HeroDetailColumn,
+  HorizontalLine,
+  CenteredH6,
+  HeroDetailContainer,
+} from "./index.styled";
 
 const HeroDetail = ({ id }) => {
   const [characterData, setCharacterData] = useState(null);
@@ -94,7 +99,7 @@ const HeroDetail = ({ id }) => {
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <HeroDetailContainer>
         <HeroDetailColumn>
           <Card />
         </HeroDetailColumn>
@@ -107,7 +112,7 @@ const HeroDetail = ({ id }) => {
         <HeroDetailColumn>
           <Stats />
         </HeroDetailColumn>
-      </div>
+      </HeroDetailContainer>
     </>
   );
 };

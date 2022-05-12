@@ -17,14 +17,11 @@ const HeroCard = ({ name, imageUrl, id }) => {
     <>
       <DashboardHeroesCardContainer onClick={handleOpen}>
         <DashboardHeroesCardStyles>
-          <DashboardHeroesCardImage
-            src={imageUrl}
-            alt={`Image of ${name}`}
-          />
+          <DashboardHeroesCardImage src={imageUrl} alt={`Image of ${name}`} />
           <h6>{name}</h6>
         </DashboardHeroesCardStyles>
       </DashboardHeroesCardContainer>
-      <Dialog open={open} onClose={handleClose} fullWidth maxWidth={"md"}>
+      <Dialog open={open} onClose={handleClose} maxWidth={"md"}>
         <DialogContent>
           <HeroDetail id={id} />
         </DialogContent>

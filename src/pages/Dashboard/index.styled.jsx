@@ -9,3 +9,8 @@ export const DashboardHeroesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
+
+export const LeftAlignedTitle = styled.h4`
+  text-align: left;
+  margin-left: 5px;
+`;
