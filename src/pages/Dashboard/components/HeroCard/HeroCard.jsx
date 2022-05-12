@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@material-ui/core";
-import DashboardHeroesDetail from "../HeroDetail/HeroDetail";
+import HeroDetail from "../HeroDetail/HeroDetail";
 import {
   DashboardHeroesCardStyles,
   DashboardHeroesCardImage,
@@ -17,13 +17,16 @@ const HeroCard = ({ name, imageUrl, id }) => {
     <>
       <DashboardHeroesCardContainer onClick={handleOpen}>
         <DashboardHeroesCardStyles>
-          <DashboardHeroesCardImage src={imageUrl} alt={`Image of ${name}`} />
-          <span>{name}</span>
+          <DashboardHeroesCardImage
+            src={imageUrl}
+            alt={`Image of ${name}`}
+          />
+          <h6>{name}</h6>
         </DashboardHeroesCardStyles>
       </DashboardHeroesCardContainer>
-      <Dialog open={open} onClose={handleClose} fullWidth maxWidth={"xl"}>
+      <Dialog open={open} onClose={handleClose} fullWidth maxWidth={"md"}>
         <DialogContent>
-          <DashboardHeroesDetail id={id} />
+          <HeroDetail id={id} />
         </DialogContent>
       </Dialog>
     </>

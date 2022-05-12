@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DashboardHeroesCardContainer = styled.div`
   display: flex;
-  width: 16.6666%;
+  width: calc(100% * (1 / 6) - 1px);
 `;
 
 export const DashboardHeroesCardStyles = styled.div`
@@ -12,6 +12,7 @@ export const DashboardHeroesCardStyles = styled.div`
   flex-direction: column;
   border: 1px solid black;
   border-radius: 20px;
+  width: 100%;
 `;
 
 export const DashboardHeroesCardImage = styled.img`

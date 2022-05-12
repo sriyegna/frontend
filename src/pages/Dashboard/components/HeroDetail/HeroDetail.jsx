@@ -14,10 +14,10 @@ const HeroDetail = ({ id }) => {
       characterData && (
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h2>Appearance</h2>
-          {appearance.gender && <h6>Gender: {appearance.gender}</h6>}
-          {appearance.race && <h6>Race: {appearance.race}</h6>}
-          {appearance.height && <h6>Height: {appearance.height}</h6>}
-          {appearance.weight && <h6>Weight: {appearance.weight}</h6>}
+          {appearance?.gender && <h6>Gender: {appearance.gender}</h6>}
+          {appearance?.race && <h6>Race: {appearance.race}</h6>}
+          {appearance?.height && <h6>Height: {appearance.height}</h6>}
+          {appearance?.weight && <h6>Weight: {appearance.weight}</h6>}
         </div>
       )
     );
@@ -29,14 +29,16 @@ const HeroDetail = ({ id }) => {
       characterData && (
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h2>Biography</h2>
-          {biography.alterEgo && <h6>Alter Egos: {biography.alterEgos}</h6>}
-          {biography.placeOfBirth && (
-            <h6>Place of Birth: {biography.placeOfBirth}</h6>
+          {biography?.alterEgos && (
+            <h6>Alter Egos / Alias: {biography.alterEgos}</h6>
           )}
-          {biography.firstAppearance && (
+          {biography?.placeOfBirth && (
+            <h6>Place of birth: {biography.placeOfBirth}</h6>
+          )}
+          {biography?.firstAppearance && (
             <h6>First Appearance: {biography.firstAppearance}</h6>
           )}
-          {biography.occupation && <h6>Occupation: {biography.occupation}</h6>}
+          {biography?.occupation && <h6>Occupation: {biography.occupation}</h6>}
         </div>
       )
     );
@@ -48,11 +50,12 @@ const HeroDetail = ({ id }) => {
       characterData && (
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h2>Stats</h2>
-          {stats.combat && <h6>Combat: {stats.combat}</h6>}
-          {stats.durability && <h6>Durability: {stats.durability}</h6>}
-          {stats.power && <h6>Power: {stats.power}</h6>}
-          {stats.speed && <h6>Speed: {stats.speed}</h6>}
-          {stats.strength && <h6>Strength: {stats.strength}</h6>}
+          {stats?.combat && <h6>Combat: {stats.combat}</h6>}
+          {stats?.durability && <h6>Durability: {stats.durability}</h6>}
+          {stats?.intelligence && <h6>Intelligence: {stats.intelligence}</h6>}
+          {stats?.power && <h6>Power: {stats.power}</h6>}
+          {stats?.speed && <h6>Speed: {stats.speed}</h6>}
+          {stats?.strength && <h6>Strength: {stats.strength}</h6>}
         </div>
       )
     );
@@ -62,18 +65,20 @@ const HeroDetail = ({ id }) => {
     return (
       characterData && (
         <DashboardHeroesCardStyles>
-          <DashboardHeroesCardImage
-            src={characterData.imageUrl}
-            alt={`Image of ${characterData.name}`}
-          />
+          {characterData?.imageUrl && (
+            <DashboardHeroesCardImage
+              src={characterData.imageUrl}
+              alt={`Image of ${characterData.name}`}
+            />
+          )}
           <HorizontalLine />
-          {characterData.name && (
+          {characterData?.name && (
             <CenteredH6>Hero Name: {characterData.name}</CenteredH6>
           )}
-          {characterData.realName && (
+          {characterData?.realName && (
             <CenteredH6>Real Name: {characterData.realName}</CenteredH6>
           )}
-          {characterData.alignment && (
+          {characterData?.alignment && (
             <CenteredH6>Alignment: {characterData.alignment}</CenteredH6>
           )}
         </DashboardHeroesCardStyles>

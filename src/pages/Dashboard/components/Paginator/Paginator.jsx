@@ -1,44 +1,58 @@
-import { useEffect, useMemo } from 'react'
-import { PaginationButton, ActivePaginationButton, PaginationNavigationButton, PaginationNavigationButtonImage } from  "./index.styled";
-import ChevronLeft from '../../../../assets/svg/chevron-left.svg'
-import ChevronRight from '../../../../assets/svg/chevron-right.svg'
+import { useMemo } from "react";
+import {
+  PaginationButton,
+  ActivePaginationButton,
+  PaginationNavigationButton,
+  PaginationNavigationButtonImage,
+} from "./index.styled";
+import ChevronLeft from "../../../../assets/svg/chevron-left.svg";
+import ChevronRight from "../../../../assets/svg/chevron-right.svg";
+import { getPageRange } from "./utils";
 
-const Paginator = ({currentPage, numOfPages, handlePageChange}) => {
+// Note: numOfPages starts from 0. So if numOfPages = 5, there are 6 pages
 
-  useEffect(() => {
-    
-    console.log(currentPage)
-  }, [currentPage])
-
+const Paginator = ({ currentPage, numOfPages, handlePageChange }) => {
   const values = useMemo(() => {
-    const result = []
-    if (currentPage < 3) {
-      for (let i = 0; i < 5; i++) {
-        result.push(i)
-      }
-    }
-    else if (currentPage >= 3 && currentPage < numOfPages - 2) {
-      for (let i = currentPage; i < currentPage + 5; i++) {
-        result.push(i - 2)
-      }
-    }
-    else if (currentPage >= numOfPages - 2) {
-      for (let i = numOfPages - 5 + 1; i <= numOfPages; i++) {
-        result.push(i)
-      }
-    }
-    return result;
-  }, [currentPage, numOfPages])
+    return getPageRange(currentPage, numOfPages);
+  }, [currentPage, numOfPages]);
 
   return (
     <>
-        <PaginationNavigationButton onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 0}><PaginationNavigationButtonImage src={ChevronLeft} alt="Previous Page" /></PaginationNavigationButton>
-        {values.map((value) => {
-          if (value !== currentPage) return (<PaginationButton onClick={() => handlePageChange(value)}>{value + 1}</PaginationButton>)
-          else return (<ActivePaginationButton onClick={() => handlePageChange(value)}>{value + 1}</ActivePaginationButton>)
-        })}
-        <PaginationNavigationButton onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === numOfPages}><PaginationNavigationButtonImage src={ChevronRight} alt="Next Page" /></PaginationNavigationButton>
-
+      <PaginationNavigationButton
+        onClick={() => handlePageChange(currentPage - 1)}
+        disabled={currentPage === 0}
+      >
+        <PaginationNavigationButtonImage
+          src={ChevronLeft}
+          alt="Previous Page"
+        />
+      </PaginationNavigationButton>
+      {values.map((value, index) => {
+        if (value !== currentPage)
+          return (
+            <PaginationButton
+              onClick={() => handlePageChange(value)}
+              key={index}
+            >
+              {value + 1}
+            </PaginationButton>
+          );
+        else
+          return (
+            <ActivePaginationButton
+              onClick={() => handlePageChange(value)}
+              key={index}
+            >
+              {value + 1}
+            </ActivePaginationButton>
+          );
+      })}
+      <PaginationNavigationButton
+        onClick={() => handlePageChange(currentPage + 1)}
+        disabled={currentPage === numOfPages}
+      >
+        <PaginationNavigationButtonImage src={ChevronRight} alt="Next Page" />
+      </PaginationNavigationButton>
     </>
   );
 };

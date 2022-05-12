@@ -1,0 +1,440 @@
+[
+  [
+    {
+      "id": 1,
+      "name": "A-Bomb",
+      "realName": "Richard Milhouse Jones",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/1-a-bomb.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Abe Sapien",
+      "realName": "Abraham Sapien",
+      "publisher": "Dark Horse Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/2-abe-sapien.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Abin Sur",
+      "realName": "",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/3-abin-sur.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Abomination",
+      "realName": "Emil Blonsky",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/4-abomination.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Abraxas",
+      "realName": "Abraxas",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/5-abraxas.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Absorbing Man",
+      "realName": "Carl Creel",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/6-absorbing-man.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Adam Monroe",
+      "realName": "",
+      "publisher": "NBC - Heroes",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/7-adam-monroe.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Adam Strange",
+      "realName": "Adam Strange",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/8-adam-strange.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Agent Bob",
+      "realName": "Bob",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/10-agent-bob.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Agent Zero",
+      "realName": "Christoph Nord",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/11-agent-zero.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Air-Walker",
+      "realName": "Gabriel Lan",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/12-air-walker.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Ajax",
+      "realName": "Francis",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/13-ajax.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Alan Scott",
+      "realName": "Alan Ladd Wellington Scott",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/14-alan-scott.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Alex Mercer",
+      "realName": "Alexander J. Mercer",
+      "publisher": "Wildstorm",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/15-alex-mercer.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Alfred Pennyworth",
+      "realName": "Alfred Thaddeus Crane Pennyworth",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/17-alfred-pennyworth.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Alien",
+      "realName": "Xenomorph",
+      "publisher": "Dark Horse Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/18-alien.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Amazo",
+      "realName": "",
+      "publisher": "DC Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/20-amazo.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Angel",
+      "realName": "Liam",
+      "publisher": "Dark Horse Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/23-angel.jpg"
+    }
+  ],
+  [
+    {
+      "id": 24,
+      "name": "Angel",
+      "realName": "Warren Kenneth Worthington III",
+      "publisher": "Archangel",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/24-angel.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Angel Dust",
+      "realName": "Christina",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/25-angel-dust.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Angel Salvadore",
+      "realName": "Angel Salvadore Bohusk",
+      "publisher": "Tempest",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/26-angel-salvadore.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Animal Man",
+      "realName": "Bernhard Baker",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/28-animal-man.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Annihilus",
+      "realName": "Annihilus",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/29-annihilus.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Ant-Man",
+      "realName": "Hank Pym",
+      "publisher": "Giant-Man",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/30-ant-man.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Ant-Man II",
+      "realName": "Scott Lang",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/31-ant-man-ii.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Anti-Monitor",
+      "realName": "",
+      "publisher": "DC Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/32-anti-monitor.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Anti-Venom",
+      "realName": "Eddie Brock",
+      "publisher": "Toxin",
+      "alignment": "-",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/34-anti-venom.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Apocalypse",
+      "realName": "En Sabah Nur",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/35-apocalypse.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Aquababy",
+      "realName": "Arthur Curry, Jr.",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/36-aquababy.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Aqualad",
+      "realName": "Garth",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/37-aqualad.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Aquaman",
+      "realName": "Orin",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/38-aquaman.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Arachne",
+      "realName": "Julia Carpenter",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/39-arachne.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Archangel",
+      "realName": "Warren Kenneth Worthington III",
+      "publisher": "Angel",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/40-archangel.jpg"
+    },
+    {
+      "id": 41,
+      "name": "Arclight",
+      "realName": "Philippa Sontag",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/41-arclight.jpg"
+    },
+    {
+      "id": 42,
+      "name": "Ardina",
+      "realName": "Ardina",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/42-ardina.jpg"
+    },
+    {
+      "id": 43,
+      "name": "Ares",
+      "realName": "",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/43-ares.jpg"
+    }
+  ],
+  [
+    {
+      "id": 44,
+      "name": "Ariel",
+      "realName": "Ariel",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/44-ariel.jpg"
+    },
+    {
+      "id": 45,
+      "name": "Armor",
+      "realName": "Hisako Ichiki",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/45-armor.jpg"
+    },
+    {
+      "id": 48,
+      "name": "Atlas",
+      "realName": "Erik Josten",
+      "publisher": "Goliath",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/48-atlas.jpg"
+    },
+    {
+      "id": 49,
+      "name": "Atlas",
+      "realName": "",
+      "publisher": "DC Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/49-atlas.jpg"
+    },
+    {
+      "id": 52,
+      "name": "Atom Girl",
+      "realName": "Salu Digby",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/52-atom-girl.jpg"
+    },
+    {
+      "id": 53,
+      "name": "Atom II",
+      "realName": "Ray Palmer",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/53-atom-ii.jpg"
+    },
+    {
+      "id": 56,
+      "name": "Aurora",
+      "realName": "Jeanne-Marie Beaubier",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/56-aurora.jpg"
+    },
+    {
+      "id": 57,
+      "name": "Azazel",
+      "realName": "",
+      "publisher": "Marvel Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/57-azazel.jpg"
+    },
+    {
+      "id": 58,
+      "name": "Azrael",
+      "realName": "Michael Washington Lane",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/58-azrael.jpg"
+    },
+    {
+      "id": 60,
+      "name": "Bane",
+      "realName": "",
+      "publisher": "DC Comics",
+      "alignment": "bad",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/60-bane.jpg"
+    },
+    {
+      "id": 61,
+      "name": "Banshee",
+      "realName": "Sean Cassidy",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/61-banshee.jpg"
+    },
+    {
+      "id": 62,
+      "name": "Bantam",
+      "realName": "Roberto Velasquez",
+      "publisher": "Marvel Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/62-bantam.jpg"
+    },
+    {
+      "id": 63,
+      "name": "Batgirl",
+      "realName": "Barbara Gordon",
+      "publisher": "Oracle",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/63-batgirl.jpg"
+    },
+    {
+      "id": 66,
+      "name": "Batgirl IV",
+      "realName": "Cassandra Cain",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/66-batgirl-iv.jpg"
+    },
+    {
+      "id": 68,
+      "name": "Batgirl VI",
+      "realName": "Stephanie Brown",
+      "publisher": "Spoiler",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/68-batgirl-vi.jpg"
+    },
+    {
+      "id": 69,
+      "name": "Batman",
+      "realName": "Terry McGinnis",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/69-batman.jpg"
+    },
+    {
+      "id": 70,
+      "name": "Batman",
+      "realName": "Bruce Wayne",
+      "publisher": "DC Comics",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg"
+    },
+    {
+      "id": 71,
+      "name": "Batman II",
+      "realName": "Dick Grayson",
+      "publisher": "Nightwing",
+      "alignment": "good",
+      "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/71-batman-ii.jpg"
+    }
+  ]
+]

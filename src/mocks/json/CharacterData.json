@@ -1,0 +1,39 @@
+{
+  "id": 12,
+  "name": "Air-Walker",
+  "realName": "Gabriel Lan",
+  "publisher": "Marvel Comics",
+  "alignment": "bad",
+  "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/12-air-walker.jpg",
+  "stats": {
+    "intelligence": 50,
+    "strength": 85,
+    "speed": 100,
+    "durability": 85,
+    "power": 100,
+    "combat": 40
+  },
+  "appearance": {
+    "gender": "Male",
+    "race": "Unknown",
+    "eyeColor": "Blue",
+    "hairColor": "White",
+    "height": "6'2, 188 cm",
+    "weight": "240 lb, 108 kg"
+  },
+  "biography": {
+    "alterEgos": "No alter egos found.",
+    "placeOfBirth": "Xandar, a planet in the Tranta system, Andromeda galaxy",
+    "firstAppearance": "Fantastic Four #120",
+    "aliases": "-",
+    "occupation": "Villain"
+  },
+  "work": {
+    "occupation": "Former starship captain, Herald of Galactus",
+    "base": "-"
+  },
+  "connections": {
+    "groupAffiliation": "Former member of Nova Corps, Heralds of Galactus",
+    "relatives": "-"
+  }
+}
