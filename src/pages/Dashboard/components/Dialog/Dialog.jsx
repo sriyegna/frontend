@@ -1,7 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable import/no-unresolved */
 import { BackDrop, StyledDialog } from "./index.styled";
-import HeroDetail from "../HeroDetail/HeroDetail";
 
 /**
  * Dialog component that can be set to open when isOpen = true
@@ -10,20 +9,18 @@ import HeroDetail from "../HeroDetail/HeroDetail";
  * @param {Object} props - Component properties
  * @param {Boolean} props.isOpen - True if we should show the dialog
  * @param {Function} props.handleClose - Handler to close the dialog and overlay
- * @param {Number} props.id - id number of the hero
- * @returns {ReactElement} HeroDetailsDialog React Component
+ * @param {ReactNode} props.children - Content to render inside the dialog
+ * @returns {ReactElement} Dialog React Component
  */
-const HeroDetailsDialog = ({ isOpen, handleClose, id }) => {
+const Dialog = ({ isOpen, handleClose, children }) => {
   return (
     isOpen && (
       <>
         <BackDrop onClick={() => handleClose()} />
-        <StyledDialog>
-          <HeroDetail id={id} />
-        </StyledDialog>
+        <StyledDialog>{children}</StyledDialog>
       </>
     )
   );
 };
 
-export default HeroDetailsDialog;
+export default Dialog;

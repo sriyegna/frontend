@@ -23,7 +23,7 @@ export const HeroDetailContainer = styled.div`
 export const HeroDetailInformationContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  justify-content: space-evenly;
 
   @media (max-width: ${MAXIMUM_MOBILE_WIDTH}) {
     display: flex;

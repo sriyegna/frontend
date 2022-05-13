@@ -6,10 +6,12 @@ import {
   DashboardHeroesCardImage,
   DashboardHeroesCardContainer,
 } from "./index.styled";
-import HeroDetailsDialog from "../HeroDetailsDialog/HeroDetailsDialog";
+import Dialog from "../Dialog/Dialog";
+import HeroDetail from "../HeroDetail/HeroDetail";
 
 /**
  * Renders the content of the DashboardHeroesCard in Dashboard
+ * Creates a modal dialog containing HeroDetails that can be opened on card click
  * @param {Object} props - Component properties
  * @param {String} props.name - Name of the hero
  * @param {String} props.imageUrl - Url to image of the hero
@@ -24,13 +26,15 @@ const DashboardHeroesCard = ({ name, imageUrl, id }) => {
 
   return (
     <>
-      <DashboardHeroesCardContainer onClick={handleOpen}>
-        <DashboardHeroesCardStyles>
+      <DashboardHeroesCardContainer>
+        <DashboardHeroesCardStyles onClick={handleOpen}>
           <DashboardHeroesCardImage src={imageUrl} alt={`${name}`} />
           <h6>{name}</h6>
         </DashboardHeroesCardStyles>
       </DashboardHeroesCardContainer>
-      <HeroDetailsDialog id={id} isOpen={open} handleClose={handleClose} />
+      <Dialog isOpen={open} handleClose={handleClose}>
+        <HeroDetail id={id} />
+      </Dialog>
     </>
   );
 };

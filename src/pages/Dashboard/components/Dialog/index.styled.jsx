@@ -11,6 +11,7 @@ export const BackDrop = styled.div`
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  cursor: pointer;
 `;
 
 export const StyledDialog = styled.div`

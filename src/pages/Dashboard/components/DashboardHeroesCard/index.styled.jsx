@@ -13,6 +13,7 @@ export const DashboardHeroesCardStyles = styled.div`
   border: 1px solid black;
   border-radius: 20px;
   width: 100%;
+  cursor: pointer;
 `;
 
 export const DashboardHeroesCardImage = styled.img`
