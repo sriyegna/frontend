@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MAXIMUM_MOBILE_WIDTH = "801px";
+const MAXIMUM_MOBILE_WIDTH = "768px";
 
 export const HeroDetailContainer = styled.div`
   display: flex;
@@ -9,6 +9,17 @@ export const HeroDetailContainer = styled.div`
   @media (max-width: ${MAXIMUM_MOBILE_WIDTH}) {
     flex-direction: column;
     padding: 18px;
+  }
+`;
+
+export const HeroDetailInformationContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @media (max-width: ${MAXIMUM_MOBILE_WIDTH}) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 `;
 

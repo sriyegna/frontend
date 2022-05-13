@@ -9,6 +9,7 @@ import {
   CenteredH6,
   HeroDetailContainer,
   HeroDetailColumnContainer,
+  HeroDetailInformationContainer,
 } from "./index.styled";
 
 const HeroDetail = ({ id }) => {
@@ -104,15 +105,17 @@ const HeroDetail = ({ id }) => {
         <HeroDetailColumn>
           <Card />
         </HeroDetailColumn>
-        <HeroDetailColumn>
-          <Appearance />
-        </HeroDetailColumn>
-        <HeroDetailColumn>
-          <Biography />
-        </HeroDetailColumn>
-        <HeroDetailColumn>
-          <Stats />
-        </HeroDetailColumn>
+        <HeroDetailInformationContainer>
+          <HeroDetailColumn>
+            <Appearance />
+          </HeroDetailColumn>
+          <HeroDetailColumn>
+            <Biography />
+          </HeroDetailColumn>
+          <HeroDetailColumn>
+            <Stats />
+          </HeroDetailColumn>
+        </HeroDetailInformationContainer>
       </HeroDetailContainer>
     </>
   );
