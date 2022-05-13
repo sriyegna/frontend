@@ -1,7 +1,14 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable import/no-unresolved */
 import { render, waitFor, screen } from "@testing-library/react";
 import HeroDetail from "./HeroDetail";
 import CharacterData from "../../../../mocks/json/CharacterData.json";
 
+/**
+ * Loads hero details dialog
+ * Checks the detailed information of the hero
+ */
 test("loads hero details", async () => {
   render(<HeroDetail id={CharacterData.id} />);
 

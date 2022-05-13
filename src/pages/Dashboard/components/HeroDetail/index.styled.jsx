@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 const MAXIMUM_MOBILE_WIDTH = "768px";
 
+/**
+ * If in desktop view, show Hero Details horizontally
+ * If in mobile view, show Hero Details vertically
+ */
 export const HeroDetailContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -12,6 +16,10 @@ export const HeroDetailContainer = styled.div`
   }
 `;
 
+/**
+ * If in desktop view, show Hero Details Information Text horizontally
+ * If in mobile view, show Hero Details Information vertically in reverse order
+ */
 export const HeroDetailInformationContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -23,6 +31,10 @@ export const HeroDetailInformationContainer = styled.div`
   }
 `;
 
+/**
+ * If in desktop view, each Hero Detail Column should take up a quarter of the width (since it is horizontally drawn)
+ * If in mobile view, each Hero Detail Column should take up the whole width (since it is vertically drawn)
+ */
 export const HeroDetailColumn = styled.div`
   display: flex;
   margin: 0 2%;

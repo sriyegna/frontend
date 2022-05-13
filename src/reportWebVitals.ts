@@ -1,3 +1,5 @@
+/* eslint-disable import/named */
+/* eslint-disable no-unused-vars */
 import { ReportHandler } from "web-vitals";
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {

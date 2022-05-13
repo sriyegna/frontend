@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable import/no-unresolved */
 import { useContext } from "react";
 import { HeroesContext } from "../../context/heroes";
 import {
@@ -5,15 +7,23 @@ import {
   DashboardHeroesContainer,
   LeftAlignedTitle,
 } from "./index.styled";
-import DashboardHeroesCard from "./components/HeroCard/HeroCard";
+import DashboardHeroesCard from "./components/DashboardHeroesCard/DashboardHeroesCard";
 import Paginator from "./components/Paginator/Paginator";
 
+/**
+ * Retrieves data from HeroesContext
+ * Creates the Heroes List and the Paginator component
+ * @returns {ReactElement} Dashboard React Component
+ */
 const Dashboard = () => {
   const {
-    state: { heroes, numOfPages },
-    currentPage,
-    setCurrentPage,
+    state: { heroes, numOfPages, currentPage },
+    dispatch,
   } = useContext(HeroesContext);
+
+  const setCurrentPage = (page) => {
+    dispatch({ type: "setCurrentPage", data: page });
+  };
 
   return (
     <DashboardContainer>
@@ -21,6 +31,7 @@ const Dashboard = () => {
         <>
           <LeftAlignedTitle>All Heroes</LeftAlignedTitle>
           <DashboardHeroesContainer>
+            {/* {Map over the heroes that have been loaded in the context} */}
             {heroes.map((hero) => (
               <DashboardHeroesCard
                 key={hero.id}
@@ -33,7 +44,7 @@ const Dashboard = () => {
           <Paginator
             currentPage={currentPage}
             numOfPages={numOfPages}
-            handlePageChange={(value) => setCurrentPage(value)}
+            handlePageChange={(page) => setCurrentPage(page)}
           />
         </>
       ) : (

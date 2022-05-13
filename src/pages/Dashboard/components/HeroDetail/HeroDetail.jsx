@@ -1,8 +1,10 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable import/no-unresolved */
 import { useEffect, useState } from "react";
 import {
   DashboardHeroesCardStyles,
   DashboardHeroesCardImage,
-} from "../HeroCard/index.styled";
+} from "../DashboardHeroesCard/index.styled";
 import {
   HeroDetailColumn,
   HorizontalLine,
@@ -12,86 +14,105 @@ import {
   HeroDetailInformationContainer,
 } from "./index.styled";
 
+/**
+ * Renders the content of the Heroes Appearance in HeroDetails
+ * @param {Object} props - Component properties
+ * @param {Object} props.data - Reference to characterData.appearance
+ * @returns {ReactElement} Appearance React Component
+ */
+const Appearance = ({ data }) => {
+  return (
+    data && (
+      <HeroDetailColumnContainer>
+        <h2>Appearance</h2>
+        {data?.gender && <h6>Gender: {data.gender}</h6>}
+        {data?.race && <h6>Race: {data.race}</h6>}
+        {data?.height && <h6>Height: {data.height}</h6>}
+        {data?.weight && <h6>Weight: {data.weight}</h6>}
+      </HeroDetailColumnContainer>
+    )
+  );
+};
+
+/**
+ * Renders the content of the Heroes Biography in HeroDetails
+ * @param {Object} props - Component properties
+ * @param {Object} props.data - Reference to characterData.biography
+ * @returns {ReactElement} Biography React Component
+ */
+const Biography = ({ data }) => {
+  return (
+    data && (
+      <HeroDetailColumnContainer>
+        <h2>Biography</h2>
+        {data?.alterEgos && <h6>Alter Egos / Alias: {data.alterEgos}</h6>}
+        {data?.placeOfBirth && <h6>Place of birth: {data.placeOfBirth}</h6>}
+        {data?.firstAppearance && (
+          <h6>First Appearance: {data.firstAppearance}</h6>
+        )}
+        {data?.occupation && <h6>Occupation: {data.occupation}</h6>}
+      </HeroDetailColumnContainer>
+    )
+  );
+};
+
+/**
+ * Renders the content of the Heroes Stats in HeroDetails
+ * @param {Object} props - Component properties
+ * @param {Object} props.data - Reference to characterData.appearance
+ * @returns {ReactElement} Stats React Component
+ */
+const Stats = ({ data }) => {
+  return (
+    data && (
+      <HeroDetailColumnContainer>
+        <h2>Stats</h2>
+        {data?.combat && <h6>Combat: {data.combat}</h6>}
+        {data?.durability && <h6>Durability: {data.durability}</h6>}
+        {data?.intelligence && <h6>Intelligence: {data.intelligence}</h6>}
+        {data?.power && <h6>Power: {data.power}</h6>}
+        {data?.speed && <h6>Speed: {data.speed}</h6>}
+        {data?.strength && <h6>Strength: {data.strength}</h6>}
+      </HeroDetailColumnContainer>
+    )
+  );
+};
+
+/**
+ * Renders the content of the HeroDetailCard in HeroDetails
+ * @param {Object} props - Component properties
+ * @param {Object} props.data - Reference to characterData
+ * @returns {ReactElement} HeroDetailCard React Component
+ */
+const HeroDetailCard = ({ data }) => {
+  return (
+    data && (
+      <DashboardHeroesCardStyles>
+        {data?.imageUrl && (
+          <DashboardHeroesCardImage
+            src={data.imageUrl}
+            alt={`${data.name}`}
+          />
+        )}
+        <HorizontalLine />
+        {data?.name && <CenteredH6>Hero Name: {data.name}</CenteredH6>}
+        {data?.realName && <CenteredH6>Real Name: {data.realName}</CenteredH6>}
+        {data?.alignment && (
+          <CenteredH6>Alignment: {data.alignment}</CenteredH6>
+        )}
+      </DashboardHeroesCardStyles>
+    )
+  );
+};
+
+/**
+ * Renders the content of the Hero Detail Dialog when given an ID
+ * @param {Object} props - Component properties
+ * @param {Number} props.id - id number of the hero
+ * @returns {ReactElement} HeroDetail React Component
+ */
 const HeroDetail = ({ id }) => {
   const [characterData, setCharacterData] = useState(null);
-
-  const Appearance = () => {
-    const { appearance } = characterData || {};
-    return (
-      characterData && (
-        <HeroDetailColumnContainer>
-          <h2>Appearance</h2>
-          {appearance?.gender && <h6>Gender: {appearance.gender}</h6>}
-          {appearance?.race && <h6>Race: {appearance.race}</h6>}
-          {appearance?.height && <h6>Height: {appearance.height}</h6>}
-          {appearance?.weight && <h6>Weight: {appearance.weight}</h6>}
-        </HeroDetailColumnContainer>
-      )
-    );
-  };
-
-  const Biography = () => {
-    const { biography } = characterData || {};
-    return (
-      characterData && (
-        <HeroDetailColumnContainer>
-          <h2>Biography</h2>
-          {biography?.alterEgos && (
-            <h6>Alter Egos / Alias: {biography.alterEgos}</h6>
-          )}
-          {biography?.placeOfBirth && (
-            <h6>Place of birth: {biography.placeOfBirth}</h6>
-          )}
-          {biography?.firstAppearance && (
-            <h6>First Appearance: {biography.firstAppearance}</h6>
-          )}
-          {biography?.occupation && <h6>Occupation: {biography.occupation}</h6>}
-        </HeroDetailColumnContainer>
-      )
-    );
-  };
-
-  const Stats = () => {
-    const { stats } = characterData || {};
-    return (
-      characterData && (
-        <HeroDetailColumnContainer>
-          <h2>Stats</h2>
-          {stats?.combat && <h6>Combat: {stats.combat}</h6>}
-          {stats?.durability && <h6>Durability: {stats.durability}</h6>}
-          {stats?.intelligence && <h6>Intelligence: {stats.intelligence}</h6>}
-          {stats?.power && <h6>Power: {stats.power}</h6>}
-          {stats?.speed && <h6>Speed: {stats.speed}</h6>}
-          {stats?.strength && <h6>Strength: {stats.strength}</h6>}
-        </HeroDetailColumnContainer>
-      )
-    );
-  };
-
-  const Card = () => {
-    return (
-      characterData && (
-        <DashboardHeroesCardStyles>
-          {characterData?.imageUrl && (
-            <DashboardHeroesCardImage
-              src={characterData.imageUrl}
-              alt={`Image of ${characterData.name}`}
-            />
-          )}
-          <HorizontalLine />
-          {characterData?.name && (
-            <CenteredH6>Hero Name: {characterData.name}</CenteredH6>
-          )}
-          {characterData?.realName && (
-            <CenteredH6>Real Name: {characterData.realName}</CenteredH6>
-          )}
-          {characterData?.alignment && (
-            <CenteredH6>Alignment: {characterData.alignment}</CenteredH6>
-          )}
-        </DashboardHeroesCardStyles>
-      )
-    );
-  };
 
   useEffect(() => {
     fetch(`http://localhost:8080/api/v1/characters/${id}`)
@@ -103,17 +124,17 @@ const HeroDetail = ({ id }) => {
     <>
       <HeroDetailContainer>
         <HeroDetailColumn>
-          <Card />
+          <HeroDetailCard data={characterData} />
         </HeroDetailColumn>
         <HeroDetailInformationContainer>
           <HeroDetailColumn>
-            <Appearance />
+            <Appearance data={characterData?.appearance || {}} />
           </HeroDetailColumn>
           <HeroDetailColumn>
-            <Biography />
+            <Biography data={characterData?.biography || {}} />
           </HeroDetailColumn>
           <HeroDetailColumn>
-            <Stats />
+            <Stats data={characterData?.stats || {}} />
           </HeroDetailColumn>
         </HeroDetailInformationContainer>
       </HeroDetailContainer>
